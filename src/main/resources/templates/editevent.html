@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BookList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" th:href="@{./css/bootstrap.min.css}" />
+    
+</head>
+<body>
+	<h1>Edit Event</h1>
+	<div class="container">
+		<form th:object="${event}" th:action="@{../save}" action="#" method="post">
+		  	<input type="hidden" id="id" th:field="*{id}" />
+		  	<label for="name">Event</label>
+			<input type="text" id="name" th:field="*{name}" />
+			<label for="host">Name of Host</label>
+			<input type="text" id="host" th:field="*{host}" />
+			<label for="date">Date of Event</label>
+			<input type="date" id="date" th:field="*{date}" />
+			<label for="time">Author</label>
+			<input type="time" id="time" th:field="*{time}" />
+			<label for="location">Title</label>
+			<input type="text" id="location" th:field="*{location}" />		
+			<label for="city">City</label>
+			<input type="text" id="city" th:field="*{city}" />		
+       		<label for="catlist">Category</label>
+			 <select id="catlist" th:field="*{category}" class="form-control">
+       			<option th:each="category: ${category}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+    		</select>
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>
+		
