@@ -15,3 +15,46 @@ h3{
 .container{
 	margin-top: 7em;
 }
+.loginHeader{
+	margin-top: 25px;	
+}
+.loginpage{
+	background-image: url("./img/loginImage.jpeg");
+}
+.eventlistpage{
+	background-image: url("./img/eventlistImage.jpeg");
+	color: white;
+}
+#events{
+	background-color: darkgreen;
+	opacity: 0.9;	
+}
+#welcome{
+	color: white;
+}
+h1{
+	color: white;
+}
+.title{
+	color: black;
+}
+.box{
+	padding: 25px;
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+}
+.box1{
+	margin-top: 10px;
+	margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+}
+.contain{
+	background-color: black;
+	color: white;
+}
+#signup{
+	color: blue;
+	margin-left: 300px;
+}

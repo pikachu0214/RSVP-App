@@ -16,7 +16,7 @@ import com.rsvp.rsvp.domain.*;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class EventRepositoryTest {
+public class CategoryRepositoryTest2 {
 	
 	@Autowired
     private EventRepository repository;
@@ -25,19 +25,16 @@ public class EventRepositoryTest {
     private CategoryRepository drepository;
 	
     @Test
-    public void saveEvent() {
-    	Category category = new Category("Happy New Year");
-        Event event = new Event("New Year", "Mikey's", "31-12-2018", "18:00", "1 Helsinki Ave", "Helsinki", drepository.save(category));
-        repository.save(event);
+    public void findByNameShouldReturnName() {
+    	Category cat = new Category("Wedding");
+        drepository.save(cat);
         
-        assertThat(event.getId()).isNotNull();
+        assertThat(cat.getName()).isEqualTo("Wedding");
+        assertThat(cat.getCategoryid()).isNotNull();
     }
     @Test
     public void deleteEvent() {
-    	List<Event> events = repository.findByCity("Boston");
-    	Long Id = events.get(0).getId();
-    	
-    	repository.deleteById(Id);
-    	assertThat(repository.findByCity("Boston")).isNotNull();
+    	Category cats = new Category("Meetings");
+    	assertThat(repository.findByName("Meeting")).isNotNull();
     }
 }

@@ -14,7 +14,6 @@ import com.rsvp.rsvp.domain.Event;
 import com.rsvp.rsvp.domain.EventRepository;
 import com.rsvp.rsvp.domain.User;
 import com.rsvp.rsvp.domain.UserRepository;
-
 @SpringBootApplication
 public class RsvpApplication {
 	@Autowired

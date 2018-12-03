@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Event {
 		//Generates ID automatically
 		@Id
-	    @GeneratedValue(strategy=GenerationType.AUTO)
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
 		//Creates attributes 
 	    private Long id;
 	 	private String name;

@@ -3,10 +3,13 @@
 <head>
     <title>Add student</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+	<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" th:href="@{./css/bootstrap.min.css}" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css" th:href="@{./css/main.css}" />
 </head>
-<body>
-	<h1>Sign-up</h1>
+<body class="loginpage" id="signup">
+	<div class="container">
+		<div class="container">
+	<h2>Sign-up</h2>
      <div class="col-md-4">
 		<form th:object="${signupform}" th:action="@{/saveuser}" action="#" method="post">
 			<div>
@@ -24,6 +27,8 @@
 			
 			<input type="submit" class="btn btn-success" value="Signup"></input>		
 		</form>
+		</div>
+	</div>
 	</div>
 </body>
 </html>

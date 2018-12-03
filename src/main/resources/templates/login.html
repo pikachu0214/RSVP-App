@@ -4,9 +4,11 @@
     <head>
         <title>Spring Security Example </title>
         <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+        <link type="text/css" rel="stylesheet" href="/css/main.css" th:href="@{css/main.css}" />
     </head>
-    <body>
-     <div class="col-md-4 col-md-offset-4">
+    <body class="loginpage">
+    <div class="container">
+     <div class="col-md-4 col-md-offset-4 loginHeader">
         <div class="alert alert-danger" th:if="${param.error}">
             Invalid username and password.
         </div>
@@ -18,7 +20,9 @@
             <div><label> Password: <input type="password" name="password" class="form-control"/> </label></div>
             <div><input type="submit" value="Sign In" class="btn btn-success"/></div>
         </form>
-        <a th:href="@{/signup}">Sign-up</a>
+        <br />
+        <a th:href="@{/signup}"><input type="submit" class="btn btn-primary" value="SignUp"/></a>
        </div>
+      </div>
     </body>
 </html>
