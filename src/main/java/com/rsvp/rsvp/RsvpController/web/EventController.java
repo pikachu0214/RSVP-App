@@ -50,7 +50,6 @@ public class EventController {
 	    }
 	    // delete an event
 	    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-	    @PreAuthorize("hasRole('ADMIN')")
 	    	public String deleteEvent(@PathVariable("id") Long eventId, Model model) {
 	    		repository.deleteById(eventId);
 	    			return "redirect:../eventlist";
